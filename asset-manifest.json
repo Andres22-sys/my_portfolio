@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my_portfolio/static/css/main.e2a7e6eb.css",
+    "main.js": "/my_portfolio/static/js/main.19f9e8b5.js",
+    "static/media/me.png": "/my_portfolio/static/media/me.6512d0a3cfa0210487c9.png",
+    "static/media/me-about.jpg": "/my_portfolio/static/media/me-about.0120589ae7891485fe60.jpg",
+    "static/media/project2.png": "/my_portfolio/static/media/project2.e17920a51f6d4ecb42e7.png",
+    "static/media/project4.png": "/my_portfolio/static/media/project4.f39e085c3f40c9513c08.png",
+    "static/media/projects6.png": "/my_portfolio/static/media/projects6.a93f202927877f9f5882.png",
+    "static/media/project3.png": "/my_portfolio/static/media/project3.c1e8217d3a5d1984b801.png",
+    "static/media/project1.png": "/my_portfolio/static/media/project1.33030b10a75565687a64.png",
+    "static/media/avatar1.png": "/my_portfolio/static/media/avatar1.2fb2d99ff71f3dcbe608.png",
+    "static/media/project5.png": "/my_portfolio/static/media/project5.87332ce71acced5fd0d4.png",
+    "static/media/avatar2.png": "/my_portfolio/static/media/avatar2.80d59c1cf7ea60ecf03a.png",
+    "static/media/Dominguez, Andres_Resume.pdf": "/my_portfolio/static/media/Dominguez, Andres_Resume.fd27e034065fa979c582.pdf",
+    "index.html": "/my_portfolio/index.html",
+    "main.e2a7e6eb.css.map": "/my_portfolio/static/css/main.e2a7e6eb.css.map",
+    "main.19f9e8b5.js.map": "/my_portfolio/static/js/main.19f9e8b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2a7e6eb.css",
+    "static/js/main.19f9e8b5.js"
+  ]
+}
