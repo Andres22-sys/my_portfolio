@@ -1,19 +1,19 @@
-import React from 'react'
-import './Projects.css'
-import IMG1 from '../../assets/project1.png'
-import IMG2 from '../../assets/project2.png'
-import IMG3 from '../../assets/project3.png'
-import IMG4 from '../../assets/project4.png'
-import IMG5 from '../../assets/project5.png'
-import IMG6 from '../../assets/projects6.png'
+import React from 'react';
+import './Projects.css';
+import IMG1 from '../../assets/project1.png';
+import IMG2 from '../../assets/project2.png';
+import IMG3 from '../../assets/project3.png';
+import IMG4 from '../../assets/project4.png';
+import IMG5 from '../../assets/project5.png';
+import IMG6 from '../../assets/project6.png';
 
 const data = [
     {
         id: 1,
-        title: "GPT-3 Website UX/UI Design",
+        title: "Nexoria Website UX/UI Design",
         image: IMG1,
-        github: "https://github.com/Andres22-sys/gpt-3-UX-UI",
-        liveDemo: "https://gpt3-dominguez.space/"
+        github: "https://github.com/Andres22-sys/nexoria",
+        liveDemo: "https://nexoria-gamma.vercel.app/"
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const data = [
         title: "Modern Restaurant Website UX/UI Design",
         image: IMG3,
         github: "https://github.com/Andres22-sys/Modern_UX-UI_Restaurant",
-        liveDemo: "https://gericht-restaurant.shop/"
+        liveDemo: "https://modern-ux-ui-restaurant.vercel.app/"
     },
     {
         id: 4,
@@ -40,8 +40,8 @@ const data = [
         id: 5,
         title: "Modern Business Website UX/UI Design",
         image: IMG5,
-        github: "https://github.com/Andres22-sys/Modern_UX-UI_HooBankWeb",
-        liveDemo: "https://modern-website.online/"
+        github: "https://github.com/Andres22-sys/Project_Hoobank",
+        liveDemo: "https://hoobank-alpha-nine.vercel.app/"
     },
     {
         id: 6,
@@ -50,7 +50,7 @@ const data = [
         github: "https://github.com/Andres22-sys/tea-cozy-web-project",
         liveDemo: "https://andres22-sys.github.io/tea-cozy-web-project/"
     },
-]
+];
 
 const Projects = () => {
     return (
@@ -59,25 +59,28 @@ const Projects = () => {
             <h2>Projects</h2>
 
             <div className="container portfolio__container">
-                {
-                    data.map(({id, image, title, github, liveDemo}) => {
-                        return (
-                            <article className="portfolio__item">
-                                <div key={id} className="portfolio__item-image">
-                                    <img src={image} alt={title}/>
-                                </div>
-                                <h3>{title}</h3>
-                                <div className="portfolio__item-cta">
-                                    <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
-                                    <a href={liveDemo} className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
-                                </div>
-                            </article>
-                        )
-                    })
-                }
+                {data.map(({ id, image, title, github, liveDemo }) => {
+                    return (
+                        // Add the key prop here on the top-level element
+                        <article key={id} className="portfolio__item">
+                            <div className="portfolio__item-image">
+                                <img src={image} alt={title} />
+                            </div>
+                            <h3>{title}</h3>
+                            <div className="portfolio__item-cta">
+                                <a href={github} className="btn" target="_blank" rel="noreferrer">
+                                    Github
+                                </a>
+                                <a href={liveDemo} className="btn btn-primary" target="_blank" rel="noreferrer">
+                                    Live Demo
+                                </a>
+                            </div>
+                        </article>
+                    );
+                })}
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

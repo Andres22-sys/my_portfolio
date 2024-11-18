@@ -1,6 +1,5 @@
 {
-  "homepage": "https://Andres22-sys.github.io/my_portfolio",
-  "name": "portfolio-website",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

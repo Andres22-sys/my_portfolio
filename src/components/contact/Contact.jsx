@@ -34,17 +34,37 @@ const Contact = () => {
                         <BsMessenger className="contact__option-icon"/>
                         <h4>Messenger</h4>
                         <h5>Andres Dominguez</h5>
-                        <a href="https://m.me/andres.dominguez.31105674" target="_blank" rel="noreferrer">Send a message</a>
+                        <a href="https://m.me/andres.dominguez.31105674" target="_blank" rel="noreferrer">Send a
+                            message</a>
                     </article>
                 </div>
                 {/* Contact Options End */}
-                <form ref={form}  onSubmit={sendEmail}>
-                    <input type="text" name="name" placeholder="Your Name" required/>
-                    <input type="email" name="email" placeholder="Your Email" required/>
-                    <textarea name="message" rows="7" placeholder="Your Message" required/>
+                <form ref={form} onSubmit={sendEmail}>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        autoComplete="name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        autoComplete="email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        rows="7"
+                        placeholder="Your Message"
+                        autoComplete="off"
+                        required
+                    />
                     <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>
             </div>
+
         </section>
     )
 }
