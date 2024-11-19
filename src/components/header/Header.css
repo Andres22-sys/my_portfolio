@@ -80,13 +80,37 @@ header h1 {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 740px) {
     header{
-        height: 100vh;
+        height: 90vh;
+        padding: 2rem;
+        margin-bottom: 0;
     }
 
-    .header__socials,
+    .header__socials a {
+        font-size: 2rem;
+        width: 20%;
+    }
+
+    .header__socials{
+        display: flex; /* Ensure the socials are visible */
+        flex-direction: row; /* Optional: Align socials in a row */
+        justify-content: center; /* Center them horizontally */
+        gap: 1rem; /* Add spacing between items */
+        position: static; /* Optional: Reset positioning */
+        padding-top: 20px;
+    }
+
+    .header__socials::after {
+        display: none;
+    }
+
     .scroll__down{
         display: none;
+    }
+
+    .me {
+        display: none;
+        margin: 0;
     }
 }
