@@ -19,8 +19,8 @@ const data = [
         id: 2,
         title: "Huckleberry Website UX/UI Design",
         image: IMG2,
-        github: "https://github.com/Andres22-sys/Huckleberry_pastry",
-        liveDemo: "https://andres22-sys.github.io/Huckleberry_pastry/"
+        github: "https://github.com/Andres22-sys/pastry-web",
+        liveDemo: "https://pastry-web.vercel.app/"
     },
     {
         id: 3,
@@ -33,8 +33,8 @@ const data = [
         id: 4,
         title: "Cinema Website UX/UI Design",
         image: IMG4,
-        github: "https://github.com/Andres22-sys/Cinemaniacs_website",
-        liveDemo: "https://andres22-sys.github.io/Cinemaniacs_website/"
+        github: "https://github.com/Andres22-sys/cinamaniac-web",
+        liveDemo: "https://cinamaniac-web.vercel.app/"
     },
     {
         id: 5,
@@ -47,8 +47,8 @@ const data = [
         id: 6,
         title: "Coffee Shop Website UX/UI Design",
         image: IMG6,
-        github: "https://github.com/Andres22-sys/tea-cozy-web-project",
-        liveDemo: "https://andres22-sys.github.io/tea-cozy-web-project/"
+        github: "https://github.com/Andres22-sys/teashop-web",
+        liveDemo: "https://teashop-web.vercel.app/"
     },
 ];
 
