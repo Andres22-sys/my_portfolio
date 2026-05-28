@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-poppins leading-[1.7];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-medium;
+  }
+
+  img {
+    @apply block w-full object-cover;
+  }
+
+  a {
+    @apply text-primary transition-all duration-300;
+  }
+
+  a:hover {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block w-max px-5 py-3 rounded-lg border border-primary text-primary cursor-pointer transition-all duration-[400ms] hover:bg-white hover:text-bg hover:border-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-bg border-primary hover:bg-white hover:border-transparent;
+  }
+
+  .section-subtitle {
+    @apply text-center text-white/60 font-medium;
+  }
+
+  .section-title {
+    @apply text-center text-primary mb-12;
+  }
+
+  .container {
+    @apply w-[90%] mx-auto sm:w-[86%] lg:w-[75%];
+  }
+}
+
+/* Swiper pagination override */
+.swiper-pagination-bullet {
+  background: #e0dcdc !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #6f4794 !important;
+}
