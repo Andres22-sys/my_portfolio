@@ -1,26 +1,37 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsMessenger } from 'react-icons/bs';
 import emailjs from '@emailjs/browser';
 import Reveal from './Reveal';
 
+type SendStatus = 'idle' | 'sending' | 'success' | 'error';
+
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<SendStatus>('idle');
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.current) return;
 
-    emailjs.sendForm(
-      'service_mcxhqjy',
-      'template_0ytngav',
-      form.current,
-      'gQEvC2hiYaB7OlBgR'
-    );
+    setStatus('sending');
 
-    e.currentTarget.reset();
+    emailjs
+      .sendForm(
+        'service_mcxhqjy',
+        'template_0ytngav',
+        form.current,
+        'gQEvC2hiYaB7OlBgR'
+      )
+      .then(() => {
+        setStatus('success');
+        form.current?.reset();
+      })
+      .catch(() => {
+        setStatus('error');
+      });
   };
 
   return (
@@ -93,10 +104,22 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="btn btn-primary w-max transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+              disabled={status === 'sending'}
+              className="btn btn-primary w-max transition-transform duration-300 hover:-translate-y-1 hover:scale-105 disabled:opacity-60 disabled:pointer-events-none"
             >
-              Send Message
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
             </button>
+
+            {status === 'success' && (
+              <p className="text-sm text-primary">
+                Thanks for reaching out! I&apos;ll get back to you soon.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-sm text-red-400">
+                Something went wrong. Please try again or email me directly.
+              </p>
+            )}
           </form>
         </Reveal>
       </div>
