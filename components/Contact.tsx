@@ -2,7 +2,11 @@
 
 import { useRef, useState } from 'react';
 import { HiOutlineMail } from 'react-icons/hi';
-import { BsMessenger } from 'react-icons/bs';
+import {
+  BsMessenger,
+  BsCheckCircleFill,
+  BsExclamationCircleFill,
+} from 'react-icons/bs';
 import emailjs from '@emailjs/browser';
 import Reveal from './Reveal';
 
@@ -111,14 +115,16 @@ const Contact = () => {
             </button>
 
             {status === 'success' && (
-              <p className="text-sm text-primary">
-                Thanks for reaching out! I&apos;ll get back to you soon.
-              </p>
+              <div className="flex items-center gap-3 rounded-lg border border-primary/40 bg-primary/10 p-4 text-sm text-primary">
+                <BsCheckCircleFill className="text-lg shrink-0" />
+                Your message was sent! I&apos;ll get back to you soon.
+              </div>
             )}
             {status === 'error' && (
-              <p className="text-sm text-red-400">
+              <div className="flex items-center gap-3 rounded-lg border border-red-400/40 bg-red-400/10 p-4 text-sm text-red-400">
+                <BsExclamationCircleFill className="text-lg shrink-0" />
                 Something went wrong. Please try again or email me directly.
-              </p>
+              </div>
             )}
           </form>
         </Reveal>
