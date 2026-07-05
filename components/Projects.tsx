@@ -1,3 +1,5 @@
+import Reveal from './Reveal';
+
 interface Project {
   id: number;
   title: string;
@@ -54,39 +56,44 @@ const projects: Project[] = [
 const Projects = () => {
   return (
     <section id="portfolio" className="mt-32 lg:mt-24">
-      <h5 className="section-subtitle">My Recent Work</h5>
-      <h2 className="section-title">Projects</h2>
+      <Reveal>
+        <h5 className="section-subtitle">My Recent Work</h5>
+        <h2 className="section-title">Projects</h2>
+      </Reveal>
 
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-10">
-        {projects.map(({ id, image, title, github, liveDemo }) => (
-          <article
-            key={id}
-            className="bg-bg p-5 rounded-[2rem] border border-transparent transition-all duration-[400ms] hover:border-bg-variant hover:bg-transparent"
-          >
-            <div className="rounded-[1.5rem] overflow-hidden mb-5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={image} alt={title} className="w-full" />
-            </div>
-            <h3 className="mb-5 text-base">{title}</h3>
-            <div className="flex gap-4 mb-4">
-              <a
-                href={github}
-                className="btn text-sm px-4 py-2"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </a>
-              <a
-                href={liveDemo}
-                className="btn btn-primary text-sm px-4 py-2"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Live Demo
-              </a>
-            </div>
-          </article>
+        {projects.map(({ id, image, title, github, liveDemo }, index) => (
+          <Reveal key={id} delay={(index % 3) * 0.15}>
+            <article className="bg-bg p-5 rounded-[2rem] border border-transparent transition-all duration-[400ms] hover:border-bg-variant hover:bg-transparent hover:-translate-y-2">
+              <div className="rounded-[1.5rem] overflow-hidden mb-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full transition-transform duration-[400ms] hover:scale-110"
+                />
+              </div>
+              <h3 className="mb-5 text-base">{title}</h3>
+              <div className="flex gap-4 mb-4">
+                <a
+                  href={github}
+                  className="btn text-sm px-4 py-2 transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+                <a
+                  href={liveDemo}
+                  className="btn btn-primary text-sm px-4 py-2 transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </article>
+          </Reveal>
         ))}
       </div>
     </section>

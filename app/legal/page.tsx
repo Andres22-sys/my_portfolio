@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Legal | Andres Dominguez',
@@ -56,9 +57,9 @@ export default function LegalPage() {
         </section>
 
         <div className="mt-16">
-          <a href="/" className="btn">
+          <Link href="/" className="btn">
             &larr; Back to Portfolio
-          </a>
+          </Link>
         </div>
       </div>
     </main>

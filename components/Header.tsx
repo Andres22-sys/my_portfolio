@@ -1,35 +1,41 @@
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub, FaFacebookSquare } from 'react-icons/fa';
+import Reveal from './Reveal';
 
 const Header = () => {
   return (
     <header className="h-[90vh] pt-28 overflow-hidden md:h-screen sm:h-[90vh]">
       <div className="w-[90%] mx-auto text-center h-full relative md:w-[75%]">
-        <h5 className="text-white/60">Hello I&apos;m</h5>
-        <h1 className="text-[3.5rem] font-bold mb-4">Andres Dominguez</h1>
-        <h5 className="text-white/60">Full-Stack Engineer</h5>
+        <Reveal>
+          <h5 className="text-white/60">Hello I&apos;m</h5>
+          <h1 className="text-[3.5rem] font-bold mb-4">Andres Dominguez</h1>
+          <h5 className="text-white/60">Full-Stack Engineer</h5>
 
-        {/* CTA */}
-        <div className="mt-10 flex gap-5 justify-center">
-          <a
-            href="/assets/Dominguez_Andres.pdf"
-            download
-            className="btn"
-          >
-            Download CV
-          </a>
-          <a href="#contact" className="btn btn-primary">
-            Let&apos;s Work Together
-          </a>
-        </div>
+          {/* CTA */}
+          <div className="mt-10 flex gap-5 justify-center">
+            <a
+              href="/assets/Dominguez_Andres.pdf"
+              download
+              className="btn transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+            >
+              Download CV
+            </a>
+            <a
+              href="#contact"
+              className="btn btn-primary transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+            >
+              Let&apos;s Work Together
+            </a>
+          </div>
+        </Reveal>
 
         {/* Socials */}
         <div className="flex flex-row justify-center gap-4 pt-5 text-xl md:flex-col md:items-center md:absolute md:left-0 md:bottom-12 md:pt-0 md:gap-3 md:after:content-[''] md:after:block md:after:w-px md:after:h-8 md:after:bg-primary">
           <a
-            href="https://www.linkedin.com/in/andresdominguez-learnerbyheart/"
+            href="https://www.linkedin.com/in/andresdominguezdev/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white"
+            className="transition-transform duration-300 hover:text-white hover:scale-125"
           >
             <BsLinkedin />
           </a>
@@ -37,7 +43,7 @@ const Header = () => {
             href="https://github.com/Andres22-sys"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white"
+            className="transition-transform duration-300 hover:text-white hover:scale-125"
           >
             <FaGithub />
           </a>
@@ -45,7 +51,7 @@ const Header = () => {
             href="https://www.facebook.com/andrz.domngz/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white"
+            className="transition-transform duration-300 hover:text-white hover:scale-125"
           >
             <FaFacebookSquare />
           </a>

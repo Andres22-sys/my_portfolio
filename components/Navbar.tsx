@@ -25,7 +25,7 @@ const Navbar = () => {
           key={id}
           href={href}
           onClick={() => setActive(id)}
-          className={`flex items-center justify-center p-3.5 rounded-full text-lg transition-all duration-300 no-underline ${
+          className={`flex items-center justify-center p-3.5 rounded-full text-lg transition-all duration-300 no-underline hover:scale-110 ${
             active === id
               ? 'bg-primary text-bg'
               : 'text-white/60 hover:bg-black/30 hover:text-white'

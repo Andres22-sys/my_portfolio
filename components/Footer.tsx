@@ -27,7 +27,7 @@ const Footer = () => {
           href="https://www.facebook.com/andrz.domngz/"
           target="_blank"
           rel="noreferrer"
-          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg"
+          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg hover:-translate-y-1 hover:scale-110"
         >
           <FaFacebookF />
         </a>
@@ -35,7 +35,7 @@ const Footer = () => {
           href="https://www.instagram.com/andrz_dom/"
           target="_blank"
           rel="noreferrer"
-          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg"
+          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg hover:-translate-y-1 hover:scale-110"
         >
           <FiInstagram />
         </a>
@@ -43,7 +43,7 @@ const Footer = () => {
           href="https://twitter.com/adominguezl22"
           target="_blank"
           rel="noreferrer"
-          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg"
+          className="bg-bg text-white p-3 rounded-xl flex items-center border border-transparent transition-all duration-[400ms] hover:bg-transparent hover:text-bg hover:border-bg hover:-translate-y-1 hover:scale-110"
         >
           <IoLogoTwitter />
         </a>

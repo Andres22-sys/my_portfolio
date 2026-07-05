@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Reveal from './Reveal';
 
 interface Testimonial {
   avatar: string;
@@ -29,36 +30,40 @@ const testimonials: Testimonial[] = [
 const Testimonials = () => {
   return (
     <section id="testimonials" className="mt-32 lg:mt-24">
-      <h5 className="section-subtitle">Peer Recommendations</h5>
-      <h2 className="section-title">Testimonials</h2>
+      <Reveal>
+        <h5 className="section-subtitle">Peer Recommendations</h5>
+        <h2 className="section-title">Testimonials</h2>
+      </Reveal>
 
-      <Swiper
-        className="w-[85%] mx-auto pb-16 sm:w-[60%] lg:w-[40%]"
-        modules={[Pagination]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-      >
-        {testimonials.map(({ avatar, name, review }, index) => (
-          <SwiperSlide
-            key={index}
-            className="bg-bg-variant text-center p-8 rounded-[2rem] select-none"
-          >
-            <div className="w-16 aspect-square overflow-hidden rounded-full mx-auto mb-4 border-[0.4rem] border-bg-variant">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={avatar}
-                alt={`${name} avatar`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h5 className="font-medium mb-2">{name}</h5>
-            <small className="text-white/60 text-sm leading-relaxed">
-              {review}
-            </small>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Reveal delay={0.15} className="w-[85%] mx-auto sm:w-[60%] lg:w-[40%]">
+        <Swiper
+          className="pb-16"
+          modules={[Pagination]}
+          spaceBetween={40}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+        >
+          {testimonials.map(({ avatar, name, review }, index) => (
+            <SwiperSlide
+              key={index}
+              className="bg-bg-variant text-center p-8 rounded-[2rem] select-none"
+            >
+              <div className="w-16 aspect-square overflow-hidden rounded-full mx-auto mb-4 border-[0.4rem] border-bg-variant">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={avatar}
+                  alt={`${name} avatar`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h5 className="font-medium mb-2">{name}</h5>
+              <small className="text-white/60 text-sm leading-relaxed">
+                {review}
+              </small>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Reveal>
     </section>
   );
 };
