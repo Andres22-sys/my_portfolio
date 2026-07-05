@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="mt-32 lg:mt-24">
+    <section id="testimonials" className="mt-32 lg:mt-44">
       <Reveal>
         <h5 className="section-subtitle">Peer Recommendations</h5>
         <h2 className="section-title">Testimonials</h2>

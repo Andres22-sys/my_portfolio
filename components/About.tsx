@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 
 const About = () => {
   return (
-    <section id="about" className="mt-32 lg:mt-24">
+    <section id="about" className="mt-12 lg:mt-44">
       <Reveal>
         <h5 className="section-subtitle">Get To Know</h5>
         <h2 className="section-title">About Me</h2>
@@ -22,7 +22,7 @@ const About = () => {
               'linear-gradient(45deg, transparent, #e0dcdc, transparent)',
           }}
         >
-          <div className="rounded-[2rem] overflow-hidden rotate-[10deg] transition-all duration-[400ms] hover:rotate-0 w-full">
+          <div className="rounded-[2rem] overflow-hidden transition-all duration-[400ms] w-full lg:rotate-[10deg] lg:hover:rotate-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/assets/me-about.jpg" alt="About Andres" />
           </div>

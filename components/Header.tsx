@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 
 const Header = () => {
   return (
-    <header className="h-[90vh] pt-28 overflow-hidden md:h-screen sm:h-[90vh]">
+    <header className="pt-28 pb-6 overflow-hidden md:h-screen md:pb-0">
       <div className="w-[90%] mx-auto text-center h-full relative md:w-[75%]">
         <Reveal>
           <h5 className="text-white/60">Hello I&apos;m</h5>

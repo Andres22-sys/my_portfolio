@@ -19,7 +19,7 @@ const Navbar = () => {
   const [active, setActive] = useState<NavId>('#');
 
   return (
-    <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-2 bg-bg-variant px-7 py-3 rounded-full backdrop-blur-md">
+    <nav className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 flex gap-2 bg-bg-variant px-7 py-3 rounded-full backdrop-blur-md md:bottom-8">
       {links.map(({ href, id, icon }) => (
         <a
           key={id}

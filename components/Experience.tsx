@@ -47,7 +47,7 @@ const SkillCard = ({ title, skills }: { title: string; skills: Skill[] }) => (
 
 const Experience = () => {
   return (
-    <section id="experience" className="mt-32 lg:mt-24">
+    <section id="experience" className="mt-32 lg:mt-44">
       <Reveal>
         <h5 className="section-subtitle">Skill I got</h5>
         <h2 className="section-title">My Experience</h2>

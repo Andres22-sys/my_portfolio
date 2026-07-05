@@ -32,7 +32,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="mt-32 lg:mt-24">
+    <section id="services" className="mt-32 lg:mt-44">
       <Reveal>
         <h5 className="section-subtitle">What I Offer</h5>
         <h2 className="section-title">Services</h2>

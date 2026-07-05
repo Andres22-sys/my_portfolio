@@ -55,7 +55,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   return (
-    <section id="portfolio" className="mt-32 lg:mt-24">
+    <section id="portfolio" className="mt-32 lg:mt-44">
       <Reveal>
         <h5 className="section-subtitle">My Recent Work</h5>
         <h2 className="section-title">Projects</h2>
